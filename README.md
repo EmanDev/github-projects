@@ -1,5 +1,5 @@
 # GitHub Projects
-A custom web page for my github projects or repositories.
+A custom web page for my github repositories.
 
 # List of projects / repos
 1.
