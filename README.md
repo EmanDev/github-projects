@@ -1,4 +1,4 @@
-# GitHub Projects
+# GitHub Repositories
 A custom web page for my github repositories.
 
 # List of projects / repos
