@@ -44,7 +44,7 @@
                     <a class="nav-link active" href="#about">About</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#repos">Repositories</a>
+                    <a class="nav-link" href="#gh-repos">Repositories</a>
                 </li>
             </ul>
             <section class="form-inline my-2 my-lg-0">
@@ -61,6 +61,55 @@
                 <h1>GitHub Repositories</h1>
                 <br>
                 <p>A web page for my GitHub Repositories. The following contents are the collection of all my work found in my <a href="https://github.com/EmanDev?tab=repositories" target="blank">GitHub profile</a>.</p>
+            </div>
+        </div>
+
+        <div id="gh-repos" class="py-5 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img src="img/fhg1.jpg" alt="Image 1" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline secondary">Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img src="img/fhg1.jpg" alt="Image 1" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline secondary">Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img src="img/fhg1.jpg" alt="Image 1" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline secondary">Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -93,7 +142,7 @@
         setTimeout(function () {
             $('.loader_bg_dark').fadeToggle();
             $('.loader_bg_light').fadeToggle();
-        }, 3000); // 1000 = 1s
+        }, 100); // 1000 = 1s
     </script>
     <script>
         // Startup (Check and Load) Code
@@ -116,7 +165,7 @@
                 $('div #about-intro').addClass('about-content')
                 $('i.theme-switch').addClass('fa-moon-o')
                 $('#preloader').addClass('loader_bg_dark')
-                // DataTitleSwitchTheme.dataset.title = "Change theme to light"
+                DataTitleSwitchTheme.dataset.title = "Change theme to light"
                 // settings on next load be saved
                 window.localStorage.removeItem("mode")
                 window.localStorage.setItem("mode", "dark")
@@ -139,7 +188,7 @@
                     $('div #about-intro').addClass('about-content-light')
                     $('i.theme-switch').addClass('fa-sun-o')
                     $('#preloader').addClass('loader_bg_light')
-                    // DataTitleSwitchTheme.dataset.title = "Change theme to dark"
+                    DataTitleSwitchTheme.dataset.title = "Change theme to dark"
                     // settings on next load be saved
                     window.localStorage.removeItem("mode")
                     window.localStorage.setItem("mode", "light")
@@ -151,6 +200,7 @@
         $('a.themer').click(switchingTheme);
 
         function switchingTheme() {
+            location.reload();
             $('nav').toggleClass('navbar-dark')
             $('nav').toggleClass('navbar-light')
             $('nav').toggleClass('bg-dark')
@@ -160,8 +210,6 @@
             $('div #about-intro').toggleClass('about-content-light')
             $('i.theme-switch').toggleClass('fa-moon-o')
             $('i.theme-switch').toggleClass('fa-sun-o')
-            // Dynamic Tooltip
-
             // Loader
             $('#preloader').toggleClass('loader_bg_dark')
             $('#preloader').toggleClass('loader_bg_light')
